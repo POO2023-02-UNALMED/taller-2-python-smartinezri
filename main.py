@@ -45,7 +45,7 @@ class Auto:
                 original = False
                 break
         
-        if self.registro != Motor.registro and self.motor != None:
+        if self.motor != None and self.registro != Motor.registro:
             original = False
         
         if original == True:
