@@ -23,7 +23,7 @@ class Motor:
             
 class Auto:
     cantidadCreados = 0
-    def __init__(self, modelo, precio, asientos,marca, motor, registro,):
+    def __init__(self, modelo, precio, marca, motor, registro,):
         self.modelo = modelo
         self.precio = precio
         self.asientos = []
@@ -40,12 +40,12 @@ class Auto:
             
     def verificarIntegridad(self):
         original = True
-        for i in self.asientos:
-            if self.asientos[i] != None and self.asientos[i].registro != self.registro:
+        for x in self.asientos:
+            if self.asientos[x] != None and self.asientos[x].registro != self.registro:
                 original = False
                 break
         
-        if self.motor != None and self.registro != Motor.registro:
+        if self.motor != None and self.registro != self.motor.registro:
             original = False
         
         if original == True:
